@@ -3,7 +3,7 @@
 This is a simple node module for incrementing alphanumeric strings
 (ie. `'a0B' => 'a0C'`).
 Useful for things like URL shorteners or anything else that could make use of
-incrementing strings. This module incrementation order going 0-9 then a-z
+incrementing strings. This modules incrementation order is 0-9 then a-z
 then A-Z. It will automatically add a new character if required.
 
 ## Usage
