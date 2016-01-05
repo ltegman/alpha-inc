@@ -10,6 +10,9 @@
   "scripts": {
     "test": "tape test/*.js | faucet || true"
   },
+  "engines": {
+    "node": "^4.2.0"
+  },
   "author": "Logan Tegman <ltegman@gmail.com>",
   "license": "MIT",
   "devDependencies": {
