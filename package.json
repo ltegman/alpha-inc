@@ -1,6 +1,6 @@
 {
   "name": "alpha-inc",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "alphanumeric string incrementer",
   "main": "index.js",
   "repository": {

@@ -2,9 +2,9 @@ const test = require('tape');
 const alpha = require('../index.js');
 
 test('alpha-inc tests', (t) => {
-  t.plan(1);
+  t.plan(2);
 
-  t.test('.next() tests', (st) => {
+  t.test('.next(string) tests', (st) => {
     st.plan(7);
 
     st.equal(alpha.next('a'), 'b', 'should increment basic strings');
@@ -19,4 +19,11 @@ test('alpha-inc tests', (t) => {
     st.equal(alpha.next(5), null, 'should return null for number input');
   });
 
+  t.test('.next(string, blacklist) tests', (st) => {
+    st.plan(2);
+
+    st.equal(alpha.next('abous', ['about']), 'abouu',
+      'should skip single word');
+    st.equal(alpha.next('a', ['b', 'c']), 'd', 'should skip two in a row');
+  });
 });

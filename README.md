@@ -4,7 +4,7 @@ Alphanumeric Increment is a simple node module for incrementing alphanumeric str
 (ie. `'a0B' => 'a0C'`).
 Useful for things like URL shorteners or anything else that could make use of
 incrementing strings. The incrementation order is 0-9 then a-z
-then A-Z. It will automatically add a new character if required.
+then A-Z. It will automatically add a new character if required. There is an optional second argument that is an array of blacklisted strings it must skip.
 
 ## Usage
 
@@ -20,6 +20,13 @@ alpha.next('ZZ');
 // Bad input
 alpha.next('f*b');
 // returns: null
+
+// with blacklist
+alpha.next('a', ['b', 'c']);
+// returns: 'd'
+
+alpha.next('abous', ['about']);
+// returns: 'abouu'
 ```
 
 ## Contributors
